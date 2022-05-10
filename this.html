@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(this);
+    // console.log(this) 는 window라고 뜸
+
+
+
+
+function sum() {
+  return this.a + this.b + this.c;
+}
+
+var o = {
+  a: 1,
+  b: 2,
+  c: 3,
+  get average() {
+    return (this.a + this.b + this.c) / 3;
+  }
+};
+
+Object.defineProperty(o, 'sum', {
+    get: sum, enumerable: true, configurable: true});
+
+console.log(o.average, o.sum)
+  </script>
+</body>
+</html>
