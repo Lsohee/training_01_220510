@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width:100vw;
+      height:100vh;
+      background-color: #ccc;
+    }
+    #root>div:nth-child(1){background-color: #333;}
+    #root>div:nth-child(2){background-color: #999;}
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="button">1</div>
+    <div id="menu-items">2</div>
+  </div>
+</body>
+<script>
+  const butDiv = document.getElementById("button");
+  const itemDiv = document.getElementById("menu-items");
+
+  console.log(butDiv);
+  console.log(itemDiv);
+
+  let booleanType = true;
+// 변수를 하나 만듬 (스위치)
+
+
+  butDiv.addEventListener("click", function(){
+    // console.log("click");
+    if(booleanType === true){
+      console.log("hello");
+      booleanType = false;
+      itemDiv.style.display= "none"
+    }else{
+      console.log("bye");
+      booleanType = true;
+      itemDiv.style.display= "block"
+    }
+  })
+
+</script>
+<!-- hidden하면 선택이 안되나? 잠금까지 되는 건가? -->
+</html>

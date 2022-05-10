@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width:100vw;
+      height:100vh;
+      background-color: #ccc;
+    }
+    #root>div:nth-child(1){background-color: #333;}
+    #root>div:nth-child(2){background-color: #999;}
+  </style>
+</head>
+<body>
+  <div id="root">
+    <ul id="menu">menu-title
+      <li class="items-1">item-1</li>
+      <li class="items-2">item-2</li>
+      <li class="items-3">item-3</li>
+      <li class="items-4">item-4</li>
+      <li class="items-5">item-5</li>
+      <li class="items-6">item-6</li>
+      <li class="items-7">item-7</li>
+      <li class="items-8">item-8</li>
+      <li class="items-9">item-9</li>
+      <li class="items-10">item-10</li>
+    </ul>
+  </div>
+</body>
+<script>
+  const items = document.getElementsByClassName("items");
+  console.log(items);
+
+
+for(let index= 0; index<items.length; index++){
+  items[index].style.color = "red";
+}
+</script>
+<!-- hidden하면 선택이 안되나? 잠금까지 되는 건가? -->
+</html>

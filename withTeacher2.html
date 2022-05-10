@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root{
+      width:100vw;
+      height:100vh;
+      background-color: #ccc;
+    }
+    #root>div:nth-child(1){background-color: #333;}
+    #root>div:nth-child(2){background-color: #999;}
+    .none{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="button">1</div>
+    <div id="menu-items">2</div>
+  </div>
+</body>
+<script>
+  const butDiv = document.getElementById("button");
+  const itemDiv = document.getElementById("menu-items");
+
+  console.log(butDiv);
+  console.log(itemDiv);
+
+
+  butDiv.addEventListener("click", function(){
+    console.dir(itemDiv);
+    if(itemDiv.classList.contains("none")){
+      //contains의 메서드에 booleanType이 있음
+      itemDiv.classList.remove("none")
+    }else{
+      itemDiv.classList.add("none")
+    }
+  })
+
+</script>
+<!-- hidden하면 선택이 안되나? 잠금까지 되는 건가? -->
+</html>
