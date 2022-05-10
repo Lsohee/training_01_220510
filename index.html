@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* *{margin:0; padding:0;} */
+    #container{
+      width:100vw;
+      height:100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root{
+      width:300px;
+      height:100px;
+      overflow: hidden;
+    }
+    #root>div:nth-child(1){
+      width:300px;
+      height:100px;
+      background-color: antiquewhite;
+    }
+    #root>div{
+      width:300px;
+      height:100px;
+      background-color: #ccc;
+      /* margin:10px; */
+    }
+  </style>
+  
+</head>
+<body>
+  <div id="container">
+    <div id="root">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    // root을 불러옴
+    const btnDiv = document.querySelector("#root>div");
+    // 버튼이 될 div을 불러옴
+    console.log(btnDiv);
+    // console로 확인
+    console.dir(root);
+    let i = 0;
+    btnDiv.addEventListener("click", function(){
+      // 여기까지가 한번 반복
+      if(i===0){
+        console.log(i);
+        i = 1;
+        root.style.overflow="visible";
+
+      }else if(i === 1){
+        console.log(i);
+        i=0;
+        root.style.overflow="hidden";
+
+      } 
+      
+    });
+// 이렇게만 하니까 div들이 보였다 안보였다 하긴 하는데 크기가 달라짐
+// ?왜  크기가 달라질까?
+
+  </script>
+</body>
+</html>
