@@ -1,10 +1,10 @@
 
-1. consoleText가 뭘까? 
+<span color="red">1. consoleText가 뭘까? 
   - 일단 함수임
   ````consoleText(["Hello Uni", "This is Us","Do or Not","Daisy","Spring Snow"], "text", ["skyblue","red","black", "lightblue","rebeccapurple"]);````
   
   ````if(colors === undefined) colors = ["#fff"];````
-
+</span>
 
 2. if문인데 중괄호가 없다!!! 
   - 이렇게 쓸 수 도 있구나라고 받아드리면 되는 건가?
