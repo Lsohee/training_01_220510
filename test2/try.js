@@ -139,11 +139,11 @@ window.setInterval(function(){
     // visible의 값에 false를 대입해줘
   }else{// 아니면
     con.className = "console-underscore"
-    // con의 객체중 className dp "console-underName"을 대입
+    // con의 객체중 className 에 "console-underName"을 대입
     visible=true;
     // visible에 true를 대입
   }
-  // memo 이거 반복되겠다
+  // memo 이거 똑딱이다 반복되겠다
 
 },400);
 // *window에서 뭘할건데 그걸 400에 한번 해줘
