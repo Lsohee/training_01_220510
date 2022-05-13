@@ -119,6 +119,7 @@ window.setInterval(function(){
   },1000) // 그걸 1000에 한번 반복해줘 // * 여기도 시간이 들어가는 걸 보니 setInterval 처럼 반복인가봄 
 
   // todo : setInterval()의 두번째 인수는 실행간격, setTimeout() 두번째 인수는 시작시기, 즉 위의 1000은 1초 뒤 실행 이라는 뜻
+  // ? 그러면 setTimeout은 반복하지 않고 1초 뒤에 한번 실행하고 끝나나요?
 
 
 
@@ -167,6 +168,7 @@ window.setInterval(function(){
     // con의 객체 중 className 에 "console-underscore hidden"을 대입 해줘
     //? console-underscore hidden은 무엇일까?
     // todo : 대입되는 속성이 className 이므로, 문자열인 console-underscore는 제작자가 지은 이름임을 추론할 수 있음
+    // ? 걍 우리가 맨날 습관처럼 쓰는 root 나 value 같은 것?
     visible = false;
     // visible의 값에 false를 대입해줘
   }else{// 아니면
